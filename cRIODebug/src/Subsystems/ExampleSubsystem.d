@@ -189,6 +189,7 @@ src/Subsystems/ExampleSubsystem.d: ../src/Subsystems/ExampleSubsystem.cpp \
  ../src/Subsystems/../Commands/ExampleCommand.h \
  ../src/Subsystems/../Commands/../CommandBase.h \
  ../src/Subsystems/../Commands/../OI.h \
+ ../src/Subsystems/../Commands/../Subsystems/WiffleCannon.h \
  ../src/Subsystems/../Commands/../Subsystems/ExampleSubsystem.h
 
 ../src/Subsystems/ExampleSubsystem.h:
@@ -570,5 +571,7 @@ C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../i
 ../src/Subsystems/../Commands/../CommandBase.h:
 
 ../src/Subsystems/../Commands/../OI.h:
+
+../src/Subsystems/../Commands/../Subsystems/WiffleCannon.h:
 
 ../src/Subsystems/../Commands/../Subsystems/ExampleSubsystem.h:

@@ -185,7 +185,7 @@ src/CommandBase.d: ../src/CommandBase.cpp ../src/CommandBase.h \
  C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/Vision/HSLImage.h \
  C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/Vision/ColorImage.h \
  C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/WPIErrors.h \
- ../src/Subsystems/ExampleSubsystem.h
+ ../src/Subsystems/WiffleCannon.h ../src/Subsystems/ExampleSubsystem.h
 
 ../src/CommandBase.h:
 
@@ -560,5 +560,7 @@ C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../i
 C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/Vision/ColorImage.h:
 
 C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/WPIErrors.h:
+
+../src/Subsystems/WiffleCannon.h:
 
 ../src/Subsystems/ExampleSubsystem.h:

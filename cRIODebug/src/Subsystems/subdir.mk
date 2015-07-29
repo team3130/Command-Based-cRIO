@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Subsystems/ExampleSubsystem.cpp 
+../src/Subsystems/ExampleSubsystem.cpp \
+../src/Subsystems/WiffleCannon.cpp 
 
 OBJS += \
-./src/Subsystems/ExampleSubsystem.o 
+./src/Subsystems/ExampleSubsystem.o \
+./src/Subsystems/WiffleCannon.o 
 
 CPP_DEPS += \
-./src/Subsystems/ExampleSubsystem.d 
+./src/Subsystems/ExampleSubsystem.d \
+./src/Subsystems/WiffleCannon.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

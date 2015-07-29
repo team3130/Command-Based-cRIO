@@ -185,8 +185,8 @@ src/robot.d: ../src/robot.cpp \
  C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/Vision/ColorImage.h \
  C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/WPIErrors.h \
  ../src/Commands/ExampleCommand.h ../src/Commands/../CommandBase.h \
- ../src/Commands/../OI.h ../src/Commands/../Subsystems/ExampleSubsystem.h \
- ../src/CommandBase.h
+ ../src/Commands/../OI.h ../src/Commands/../Subsystems/WiffleCannon.h \
+ ../src/Commands/../Subsystems/ExampleSubsystem.h ../src/CommandBase.h
 
 C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/WPILib.h:
 
@@ -563,6 +563,8 @@ C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../i
 ../src/Commands/../CommandBase.h:
 
 ../src/Commands/../OI.h:
+
+../src/Commands/../Subsystems/WiffleCannon.h:
 
 ../src/Commands/../Subsystems/ExampleSubsystem.h:
 

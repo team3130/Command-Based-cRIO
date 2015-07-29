@@ -4,12 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/Commands/ControlWiffleCannon.cpp \
 ../src/Commands/ExampleCommand.cpp 
 
 OBJS += \
+./src/Commands/ControlWiffleCannon.o \
 ./src/Commands/ExampleCommand.o 
 
 CPP_DEPS += \
+./src/Commands/ControlWiffleCannon.d \
 ./src/Commands/ExampleCommand.d 
 
 

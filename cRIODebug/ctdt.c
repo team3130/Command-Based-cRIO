@@ -27,6 +27,8 @@ void _GLOBAL__I_65535_0__ZN12DataIOStreamC2EP8IOStream();
 
 void _GLOBAL__I_65535_0__ZN12NetworkTable19PATH_SEPARATOR_CHARE();
 
+void _GLOBAL__I_65535_0__ZN12WiffleCannonC2Ev();
+
 void _GLOBAL__I_65535_0__ZN12WriteManagerC2ER30FlushableOutgoingEntryReceiverR15NTThreadManagerR30AbstractNetworkTableEntryStorem();
 
 void _GLOBAL__I_65535_0__ZN14ExampleCommandC2Ev();
@@ -42,6 +44,8 @@ void _GLOBAL__I_65535_0__ZN17DefaultEntryTypes7BOOLEANE();
 void _GLOBAL__I_65535_0__ZN17MotorSafetyHelper12m_headHelperE();
 
 void _GLOBAL__I_65535_0__ZN18NetworkTableServerC2ER16IOStreamProviderR28NetworkTableEntryTypeManagerR15NTThreadManager();
+
+void _GLOBAL__I_65535_0__ZN19ControlWiffleCannonC2Ev();
 
 void _GLOBAL__I_65535_0__ZN21ClientConnectionState24DISCONNECTED_FROM_SERVERE();
 
@@ -74,6 +78,7 @@ void (*_ctors[])() =
     _GLOBAL__I_65535_0__ZN12BooleanArray20BOOLEAN_ARRAY_RAW_IDE,
     _GLOBAL__I_65535_0__ZN12DataIOStreamC2EP8IOStream,
     _GLOBAL__I_65535_0__ZN12NetworkTable19PATH_SEPARATOR_CHARE,
+    _GLOBAL__I_65535_0__ZN12WiffleCannonC2Ev,
     _GLOBAL__I_65535_0__ZN12WriteManagerC2ER30FlushableOutgoingEntryReceiverR15NTThreadManagerR30AbstractNetworkTableEntryStorem,
     _GLOBAL__I_65535_0__ZN14ExampleCommandC2Ev,
     _GLOBAL__I_65535_0__ZN14SmartDashboard7m_tableE,
@@ -82,6 +87,7 @@ void (*_ctors[])() =
     _GLOBAL__I_65535_0__ZN17DefaultEntryTypes7BOOLEANE,
     _GLOBAL__I_65535_0__ZN17MotorSafetyHelper12m_headHelperE,
     _GLOBAL__I_65535_0__ZN18NetworkTableServerC2ER16IOStreamProviderR28NetworkTableEntryTypeManagerR15NTThreadManager,
+    _GLOBAL__I_65535_0__ZN19ControlWiffleCannonC2Ev,
     _GLOBAL__I_65535_0__ZN21ClientConnectionState24DISCONNECTED_FROM_SERVERE,
     _GLOBAL__I_65535_0__ZN21ServerConnectionState26GOT_CONNECTION_FROM_CLIENTE,
     _GLOBAL__I_65535_0__ZN2OIC2Ev,
@@ -110,6 +116,8 @@ void _GLOBAL__D_65535_1__ZN12DataIOStreamC2EP8IOStream();
 
 void _GLOBAL__D_65535_1__ZN12NetworkTable19PATH_SEPARATOR_CHARE();
 
+void _GLOBAL__D_65535_1__ZN12WiffleCannonC2Ev();
+
 void _GLOBAL__D_65535_1__ZN12WriteManagerC2ER30FlushableOutgoingEntryReceiverR15NTThreadManagerR30AbstractNetworkTableEntryStorem();
 
 void _GLOBAL__D_65535_1__ZN14ExampleCommandC2Ev();
@@ -123,6 +131,8 @@ void _GLOBAL__D_65535_1__ZN17DefaultEntryTypes7BOOLEANE();
 void _GLOBAL__D_65535_1__ZN17MotorSafetyHelper12m_headHelperE();
 
 void _GLOBAL__D_65535_1__ZN18NetworkTableServerC2ER16IOStreamProviderR28NetworkTableEntryTypeManagerR15NTThreadManager();
+
+void _GLOBAL__D_65535_1__ZN19ControlWiffleCannonC2Ev();
 
 void _GLOBAL__D_65535_1__ZN21ServerConnectionState26GOT_CONNECTION_FROM_CLIENTE();
 
@@ -151,6 +161,7 @@ void (*_dtors[])() =
     _GLOBAL__D_65535_1__ZN12BooleanArray20BOOLEAN_ARRAY_RAW_IDE,
     _GLOBAL__D_65535_1__ZN12DataIOStreamC2EP8IOStream,
     _GLOBAL__D_65535_1__ZN12NetworkTable19PATH_SEPARATOR_CHARE,
+    _GLOBAL__D_65535_1__ZN12WiffleCannonC2Ev,
     _GLOBAL__D_65535_1__ZN12WriteManagerC2ER30FlushableOutgoingEntryReceiverR15NTThreadManagerR30AbstractNetworkTableEntryStorem,
     _GLOBAL__D_65535_1__ZN14ExampleCommandC2Ev,
     _GLOBAL__D_65535_1__ZN14SmartDashboard7m_tableE,
@@ -158,6 +169,7 @@ void (*_dtors[])() =
     _GLOBAL__D_65535_1__ZN17DefaultEntryTypes7BOOLEANE,
     _GLOBAL__D_65535_1__ZN17MotorSafetyHelper12m_headHelperE,
     _GLOBAL__D_65535_1__ZN18NetworkTableServerC2ER16IOStreamProviderR28NetworkTableEntryTypeManagerR15NTThreadManager,
+    _GLOBAL__D_65535_1__ZN19ControlWiffleCannonC2Ev,
     _GLOBAL__D_65535_1__ZN21ServerConnectionState26GOT_CONNECTION_FROM_CLIENTE,
     _GLOBAL__D_65535_1__ZN2OIC2Ev,
     _GLOBAL__D_65535_1__ZN8Resource12m_createLockE,
