@@ -4,7 +4,7 @@ ControlWiffleCannon::ControlWiffleCannon()
 {
 	Requires(wiffleCannon);
 	m_button = new JoystickButton(oi->stickL, 1);
-	m_bOldState = false;
+	m_bActiveState = false;
 	m_timer = new Timer();
 	m_nTimerTime = 3600;
 }
@@ -18,32 +18,48 @@ ControlWiffleCannon::~ControlWiffleCannon()
 void ControlWiffleCannon::Initialize()
 {
 	wiffleCannon->Shoot(0);
+	m_timer->Stop();
+	m_timer->Reset();
 }
 
 // Called repeatedly when this Command is scheduled to run
 void ControlWiffleCannon::Execute()
 {
-	if(m_bOldState && !m_button->Get()){
-		m_bOldState = false;
+// Waiting state logic - Handles trigger checking
+	if(!m_bActiveState && m_button->Get()){
+		m_bActiveState = true;
 	}
-	if(m_bOldState == false){
-		if(m_button->Get()){
-			m_bOldState = true;
-			m_timer->Start();
+
+//Active State - Timer Logic for Shooting Action
+	if(m_bActiveState){
+		m_timer->Start();
+
+		 // Reverse to shoot
+		if(m_timer->Get() < 1){
 			wiffleCannon->Shoot(-1);
-			if(m_timer->Get() >= m_nTimerTime+1){
-				wiffleCannon->Shoot(0);
-				m_timer->Stop();
-			}
-			if(m_timer->Get() >= 1 && m_timer->Get() < m_nTimerTime){
-				m_nTimerTime = m_timer->Get();
-				wiffleCannon->Shoot(1);
-			}
-		}else{
+		}
+
+		//Forward to stop shooting
+		else if(m_timer->Get() < m_nTimerTime){
+			m_nTimerTime = m_timer->Get();
+			wiffleCannon->Shoot(1);
+		}
+
+		//Stop running motor and reset variables and timer for shooting again
+		else if(m_timer->Get() >= m_nTimerTime+1){
+			wiffleCannon->Shoot(0);
+			m_timer->Stop();
 			m_timer->Reset();
 			m_nTimerTime = 3600;
+			m_bActiveState = false;
 		}
 	}
+/*
+	if(m_button->Get()){
+		wiffleCannon->Shoot(-1);
+	}else{
+		wiffleCannon->Shoot(1);
+	}*/
 }
 
 // Make this return true when this Command no longer needs to run execute()

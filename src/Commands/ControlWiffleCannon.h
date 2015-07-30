@@ -16,7 +16,7 @@ public:
 	void Interrupted();
 	JoystickButton* m_button;
 	Timer* m_timer;
-	bool m_bOldState;
+	bool m_bActiveState;
 	int m_nTimerTime;
 
 };

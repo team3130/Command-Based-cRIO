@@ -6,7 +6,7 @@
 // Initialize a single static instance of all of your subsystems to NULL
 ExampleSubsystem* CommandBase::chassis = NULL;
 OI* CommandBase::oi = NULL;
-
+WiffleCannon* CommandBase::wiffleCannon = NULL;
 CommandBase::CommandBase(char const *name) :
 		Command(name)
 {
