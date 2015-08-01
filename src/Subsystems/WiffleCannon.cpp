@@ -6,25 +6,18 @@
 WiffleCannon::WiffleCannon() :
 		Subsystem("WiffleCannon")
 {
-	m_shootControler = new Relay(1);
+	m_shootControler = new Jaguar(1);
 }
 
 void WiffleCannon::InitDefaultCommand()
 {
-	SetDefaultCommand(new ExampleCommand());
+	SetDefaultCommand(new ControlWiffleCannon());
 }
 
-void WiffleCannon::Shoot(int direction)
+void WiffleCannon::Shoot(float direction)
 {
-	if(direction == 1){
-		m_shootControler->Set(Relay::kForward);
-	}else if(direction == -1){
-		m_shootControler->Set(Relay::kReverse);
-	}else{
-		m_shootControler->Set(Relay::kOff);
-	}
+	m_shootControler->Set(direction);
 }
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-

@@ -36,18 +36,18 @@ void ControlWiffleCannon::Execute()
 
 		 // Reverse to shoot
 		if(m_timer->Get() < 1){
-			wiffleCannon->Shoot(-1);
+			wiffleCannon->Shoot(float(-1.0));
 		}
 
 		//Forward to stop shooting
 		else if(m_timer->Get() < m_nTimerTime){
 			m_nTimerTime = m_timer->Get();
-			wiffleCannon->Shoot(1);
+			wiffleCannon->Shoot(float(1.0));
 		}
 
 		//Stop running motor and reset variables and timer for shooting again
 		else if(m_timer->Get() >= m_nTimerTime+1){
-			wiffleCannon->Shoot(0);
+			wiffleCannon->Shoot(float(0.0));
 			m_timer->Stop();
 			m_timer->Reset();
 			m_nTimerTime = 3600;
