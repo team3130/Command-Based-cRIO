@@ -191,7 +191,8 @@ src/Subsystems/WiffleCannon.d: ../src/Subsystems/WiffleCannon.cpp \
  ../src/Subsystems/../Commands/../OI.h \
  ../src/Subsystems/../Commands/../Subsystems/WiffleCannon.h \
  ../src/Subsystems/../Commands/../Subsystems/ExampleSubsystem.h \
- C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/relay.h
+ C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/relay.h \
+ ../src/Subsystems/../Commands/ControlWiffleCannon.h
 
 ../src/Subsystems/WiffleCannon.h:
 
@@ -578,3 +579,5 @@ C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../i
 ../src/Subsystems/../Commands/../Subsystems/ExampleSubsystem.h:
 
 C:\Program\ Files\ (x86)\FRC_Toolchain\mingw\powerpc-wrs-vxworks\wind_base\/../include/WPILib/relay.h:
+
+../src/Subsystems/../Commands/ControlWiffleCannon.h:

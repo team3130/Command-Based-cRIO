@@ -14,6 +14,7 @@
 // following variables to use with your drivetrain subsystem.
 const int LEFTMOTOR = 1;
 const int RIGHTMOTOR = 2;
+const int SHOOTMOTOR = 3;
 
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:

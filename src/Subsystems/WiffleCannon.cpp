@@ -2,11 +2,12 @@
 #include "../RobotMap.h"
 #include "../Commands/ExampleCommand.h"
 #include "relay.h"
+#include "../Commands/ControlWiffleCannon.h"
 
 WiffleCannon::WiffleCannon() :
 		Subsystem("WiffleCannon")
 {
-	m_shootControler = new Jaguar(1);
+	m_shootControler = new Talon(SHOOTMOTOR);
 }
 
 void WiffleCannon::InitDefaultCommand()

@@ -10,7 +10,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	Jaguar* m_shootControler;
+	Talon* m_shootControler;
 	WiffleCannon();
 	void InitDefaultCommand();
 	void Shoot(float direction);

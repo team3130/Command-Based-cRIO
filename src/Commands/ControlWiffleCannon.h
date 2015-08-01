@@ -15,9 +15,10 @@ public:
 	void End();
 	void Interrupted();
 	JoystickButton* m_button;
+	JoystickButton* m_button2;
 	Timer* m_timer;
 	bool m_bActiveState;
-	int m_nTimerTime;
+	double m_dTimerTime;
 
 };
 

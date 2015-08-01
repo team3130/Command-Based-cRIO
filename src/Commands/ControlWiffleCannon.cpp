@@ -4,9 +4,10 @@ ControlWiffleCannon::ControlWiffleCannon()
 {
 	Requires(wiffleCannon);
 	m_button = new JoystickButton(oi->stickL, 1);
+	m_button2 = new JoystickButton(oi->stickL, 2);
 	m_bActiveState = false;
 	m_timer = new Timer();
-	m_nTimerTime = 3600;
+	m_dTimerTime = 3600;
 }
 
 ControlWiffleCannon::~ControlWiffleCannon()
@@ -35,22 +36,22 @@ void ControlWiffleCannon::Execute()
 		m_timer->Start();
 
 		 // Reverse to shoot
-		if(m_timer->Get() < 1){
+		if(m_timer->Get() < .12){
 			wiffleCannon->Shoot(float(-1.0));
 		}
 
 		//Forward to stop shooting
-		else if(m_timer->Get() < m_nTimerTime){
-			m_nTimerTime = m_timer->Get();
+		else if(m_timer->Get() < .5){
+			m_dTimerTime = m_timer->Get();
 			wiffleCannon->Shoot(float(1.0));
 		}
 
 		//Stop running motor and reset variables and timer for shooting again
-		else if(m_timer->Get() >= m_nTimerTime+1){
+		else if(m_timer->Get() < 1){
 			wiffleCannon->Shoot(float(0.0));
 			m_timer->Stop();
 			m_timer->Reset();
-			m_nTimerTime = 3600;
+			m_dTimerTime = 3600;
 			m_bActiveState = false;
 		}
 	}
@@ -59,6 +60,13 @@ void ControlWiffleCannon::Execute()
 		wiffleCannon->Shoot(-1);
 	}else{
 		wiffleCannon->Shoot(1);
+	}*//*
+	if(m_button->Get()){
+		wiffleCannon->Shoot(float(-1.0));
+	}else if(m_button2->Get()){
+		wiffleCannon->Shoot(float(1.0));
+	}else{
+		wiffleCannon->Shoot(float(0.0));
 	}*/
 }
 
