@@ -7,6 +7,7 @@
 ExampleSubsystem* CommandBase::chassis = NULL;
 OI* CommandBase::oi = NULL;
 WiffleCannon* CommandBase::wiffleCannon = NULL;
+WiffleLauncher* CommandBase::wiffleLauncher = NULL;
 CommandBase::CommandBase(char const *name) :
 		Command(name)
 {
@@ -24,5 +25,6 @@ void CommandBase::init()
 	// line should be repeated for each subsystem in the project.
 	chassis = new ExampleSubsystem();
 	wiffleCannon = new WiffleCannon();
+	wiffleLauncher = new WiffleLauncher();
 	oi = new OI();
 }

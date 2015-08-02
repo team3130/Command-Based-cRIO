@@ -7,6 +7,7 @@
 #include "WPILib.h"
 #include "Subsystems/WiffleCannon.h"
 #include "Subsystems/ExampleSubsystem.h"
+#include "Subsystems/WiffleLauncher.h"
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -23,6 +24,7 @@ public:
 	static ExampleSubsystem *chassis;
 	static OI *oi;
 	static WiffleCannon *wiffleCannon;
+	static WiffleLauncher *wiffleLauncher;
 };
 
 #endif
