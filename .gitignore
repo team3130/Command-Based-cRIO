@@ -1,1 +1,5 @@
-/cRIODebug/
+cRIODebug/*
+.settings/language.settings.xml
+*~
+*.bak
+
