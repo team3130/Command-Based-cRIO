@@ -55,7 +55,11 @@ void ControlWiffleCannon::Execute()
 			m_bActiveState = false;
 		}
 	}*/
-wiffleCannon->Shoot(float(0.5));
+	if(m_button->Get()){
+		wiffleCannon->Shoot(float(1.0/3.0));
+	}else{
+		wiffleCannon->Shoot(0);
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
