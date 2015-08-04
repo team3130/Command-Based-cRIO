@@ -13,6 +13,7 @@ ControlWiffleCannon::ControlWiffleCannon()
 ControlWiffleCannon::~ControlWiffleCannon()
 {
 	delete m_button;
+	delete m_button2;
 	delete m_timer;
 }
 // Called just before this Command runs the first time

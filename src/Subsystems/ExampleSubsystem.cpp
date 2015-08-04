@@ -6,7 +6,7 @@ ExampleSubsystem::ExampleSubsystem() :
 		Subsystem("ExampleSubsystem")
 		, m_drive(LEFTMOTOR,RIGHTMOTOR)
 {
-
+	m_drive.SetSafetyEnabled(false);
 }
 
 void ExampleSubsystem::InitDefaultCommand()

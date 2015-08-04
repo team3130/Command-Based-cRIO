@@ -2,6 +2,7 @@
 #include "Commands/Scheduler.h"
 #include "Subsystems/WiffleCannon.h"
 #include "Subsystems/ExampleSubsystem.h"
+#include "Subsystems/WiffleLauncher.h"
 
 // Initialize a single static instance of all of your subsystems to NULL
 ExampleSubsystem* CommandBase::chassis = NULL;
