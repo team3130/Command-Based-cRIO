@@ -25,7 +25,7 @@ void ControlWiffleCannon::Initialize()
 
 // Called repeatedly when this Command is scheduled to run
 void ControlWiffleCannon::Execute()
-{
+{/*
 // Waiting state logic - Handles trigger checking
 	if(!m_bActiveState && m_button->Get()){
 		m_bActiveState = true;
@@ -54,20 +54,8 @@ void ControlWiffleCannon::Execute()
 			m_dTimerTime = 3600;
 			m_bActiveState = false;
 		}
-	}
-/*
-	if(m_button->Get()){
-		wiffleCannon->Shoot(-1);
-	}else{
-		wiffleCannon->Shoot(1);
-	}*//*
-	if(m_button->Get()){
-		wiffleCannon->Shoot(float(-1.0));
-	}else if(m_button2->Get()){
-		wiffleCannon->Shoot(float(1.0));
-	}else{
-		wiffleCannon->Shoot(float(0.0));
 	}*/
+wiffleCannon->Shoot(float(0.5));
 }
 
 // Make this return true when this Command no longer needs to run execute()
