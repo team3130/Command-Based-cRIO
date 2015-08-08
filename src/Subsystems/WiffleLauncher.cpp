@@ -6,6 +6,7 @@ WiffleLauncher::WiffleLauncher() :
 		Subsystem("WiffleLauncher")
 {
 	m_launchControler = new Talon(LAUNCHMOTORS);
+	m_beltMotor = new Talon(BELTMOTOR);
 }
 
 void WiffleLauncher::InitDefaultCommand()
@@ -15,8 +16,12 @@ void WiffleLauncher::InitDefaultCommand()
 
 void WiffleLauncher::Launch(float speed)
 {
-	m_launchControler->Set(speed/-3);
+	m_launchControler->Set(speed/-1);
 }
 
+void WiffleLauncher::DriveBelt(float speed)
+{
+	m_beltMotor->Set(speed);
+}
 // Put methods for controlling this subsystem
 // here. Call these from Commands.

@@ -16,7 +16,7 @@ void ExampleSubsystem::InitDefaultCommand()
 
 void ExampleSubsystem::Drive(double move, double turn, bool quad)
 {
-	m_drive.ArcadeDrive(move, turn, quad);
+	m_drive.ArcadeDrive(move/2, turn, quad);
 }
 
 // Put methods for controlling this subsystem

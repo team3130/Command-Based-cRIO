@@ -3,25 +3,17 @@
 ControlWiffleCannon::ControlWiffleCannon()
 {
 	Requires(wiffleCannon);
-	m_button = new JoystickButton(oi->stickL, 1);
-	m_button2 = new JoystickButton(oi->stickL, 2);
-	m_bActiveState = false;
-	m_timer = new Timer();
-	m_dTimerTime = 3600;
+	m_button = new JoystickButton(oi->stickL, 2);
 }
 
 ControlWiffleCannon::~ControlWiffleCannon()
 {
 	delete m_button;
-	delete m_button2;
-	delete m_timer;
 }
 // Called just before this Command runs the first time
 void ControlWiffleCannon::Initialize()
 {
 	wiffleCannon->Shoot(0);
-	m_timer->Stop();
-	m_timer->Reset();
 }
 
 // Called repeatedly when this Command is scheduled to run

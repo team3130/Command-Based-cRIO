@@ -3,6 +3,7 @@
 ControlWiffleLauncher::ControlWiffleLauncher()
 {
 	Requires(wiffleLauncher);
+	m_button = new JoystickButton(CommandBase::oi->stickL,1);
 }
 
 // Called just before this Command runs the first time
@@ -14,7 +15,13 @@ void ControlWiffleLauncher::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ControlWiffleLauncher::Execute()
 {
-	wiffleLauncher->Launch((-0.5 * CommandBase::oi->stickR->GetZ()) + 0.5);
+	if(m_button->Get()){
+		wiffleLauncher->Launch((-0.5 * CommandBase::oi->stickR->GetZ()) + 0.5);
+		wiffleLauncher->DriveBelt(1);
+	}else{
+		wiffleLauncher->Launch(0);
+		wiffleLauncher->DriveBelt(0);
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()

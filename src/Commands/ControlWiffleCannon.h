@@ -15,11 +15,6 @@ public:
 	void End();
 	void Interrupted();
 	JoystickButton* m_button;
-	JoystickButton* m_button2;
-	Timer* m_timer;
-	bool m_bActiveState;
-	double m_dTimerTime;
-
 };
 
 #endif

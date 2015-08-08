@@ -2,6 +2,6 @@
 
 OI::OI()
 {
-	stickL = new Joystick(2);
-	stickR = new Joystick(1);
+	stickL = new Joystick(1);
+	stickR = new Joystick(2);
 }

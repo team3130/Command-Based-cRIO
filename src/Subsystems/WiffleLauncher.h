@@ -11,9 +11,11 @@ private:
 	// for methods that implement subsystem capabilities
 public:
 	Talon* m_launchControler;
+	Talon* m_beltMotor;
 	WiffleLauncher();
 	void InitDefaultCommand();
 	void Launch(float speed);
+	void DriveBelt(float speed);
 };
 
 #endif
