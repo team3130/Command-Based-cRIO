@@ -20,7 +20,8 @@ const int LAUNCHMOTORR = 5;
 const int BELTMOTOR = 9;
 
 //Relays
-const int ALARM = 1;
+const int BEATER = 1;
+const int ALARM = 2;
 
 // If you are using multiple modules, make sure to define both the port
 // number and the module. For example you with a rangefinder:
