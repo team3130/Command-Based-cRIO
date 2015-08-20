@@ -4,6 +4,7 @@
 #include "Subsystems/ExampleSubsystem.h"
 #include "Subsystems/WiffleLauncher.h"
 #include "Subsystems/FireWhine.h"
+#include "Subsystems/IntakeBar.h"
 
 // Initialize a single static instance of all of your subsystems to NULL
 ExampleSubsystem* CommandBase::chassis = NULL;
@@ -11,6 +12,7 @@ OI* CommandBase::oi = NULL;
 WiffleCannon* CommandBase::wiffleCannon = NULL;
 WiffleLauncher* CommandBase::wiffleLauncher = NULL;
 FireWhine* CommandBase::fireWhine = NULL;
+IntakeBar* CommandBase::intakeBar = NULL;
 CommandBase::CommandBase(char const *name) :
 		Command(name)
 {
@@ -30,5 +32,6 @@ void CommandBase::init()
 	wiffleCannon = new WiffleCannon();
 	wiffleLauncher = new WiffleLauncher();
 	fireWhine = new FireWhine();
+	intakeBar = new IntakeBar();
 	oi = new OI();
 }

@@ -6,7 +6,7 @@
 FireWhine::FireWhine() :
 		Subsystem("FireWhine")
 {
-	m_AlarmControl = new Relay(ALARM);
+	m_AlarmControl = new Relay(ALARM, Relay::kForwardOnly);
 }
 
 void FireWhine::InitDefaultCommand()
