@@ -10,11 +10,12 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	Talon* m_launchControler;
+	Talon* m_launchControlerL;
+	Talon* m_launchControlerR;
 	Talon* m_beltMotor;
 	WiffleLauncher();
 	void InitDefaultCommand();
-	void Launch(float speed);
+	void Launch(float speedL, float speedR);
 	void DriveBelt(float speed);
 };
 

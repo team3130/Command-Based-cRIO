@@ -5,7 +5,8 @@
 WiffleLauncher::WiffleLauncher() :
 		Subsystem("WiffleLauncher")
 {
-	m_launchControler = new Talon(LAUNCHMOTORS);
+	m_launchControlerL = new Talon(LAUNCHMOTORL);
+	m_launchControlerR = new Talon(LAUNCHMOTORR);
 	m_beltMotor = new Talon(BELTMOTOR);
 }
 
@@ -14,9 +15,10 @@ void WiffleLauncher::InitDefaultCommand()
 	SetDefaultCommand(new ControlWiffleLauncher());
 }
 
-void WiffleLauncher::Launch(float speed)
+void WiffleLauncher::Launch(float speedL, float speedR)
 {
-	m_launchControler->Set(speed/-1);
+	m_launchControlerL->Set(speedL/-1);
+	m_launchControlerR->Set(speedR/-1);
 }
 
 void WiffleLauncher::DriveBelt(float speed)

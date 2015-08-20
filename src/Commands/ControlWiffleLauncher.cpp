@@ -9,17 +9,28 @@ ControlWiffleLauncher::ControlWiffleLauncher()
 // Called just before this Command runs the first time
 void ControlWiffleLauncher::Initialize()
 {
-	wiffleLauncher->Launch(0.0);
+	wiffleLauncher->Launch(0, 0);
 }
 
 // Called repeatedly when this Command is scheduled to run
 void ControlWiffleLauncher::Execute()
 {
+	int nBaseSpeed = (-0.5 * CommandBase::oi->stickR->GetZ() + 0.5);
+	int nLSpeed = nBaseSpeed;
+	int nRSpeed = nBaseSpeed;
+	float fTwist = CommandBase::oi->stickR->GetTwist();
+
+	if(fTwist <= -.5){
+		nLSpeed -= .1;
+	}else if(fTwist >= .5){
+		nRSpeed -= .1;
+	}
+
 	if(m_button->Get()){
-		wiffleLauncher->Launch((-0.5 * CommandBase::oi->stickR->GetZ()) + 0.5);
+		wiffleLauncher->Launch(nLSpeed, nRSpeed);
 		wiffleLauncher->DriveBelt(1);
 	}else{
-		wiffleLauncher->Launch(0);
+		wiffleLauncher->Launch(0,0);
 		wiffleLauncher->DriveBelt(0);
 	}
 }

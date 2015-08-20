@@ -8,6 +8,7 @@
 #include "Subsystems/WiffleCannon.h"
 #include "Subsystems/ExampleSubsystem.h"
 #include "Subsystems/WiffleLauncher.h"
+#include "Subsystems/FireWhine.h"
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -25,6 +26,7 @@ public:
 	static OI *oi;
 	static WiffleCannon *wiffleCannon;
 	static WiffleLauncher *wiffleLauncher;
+	static FireWhine *fireWhine;
 };
 
 #endif
