@@ -14,7 +14,7 @@ void ControlBar::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ControlBar::Execute()
 {
-	intakeBar->Alarm(CommandBase::oi->stickL->GetRawButton(4));
+	intakeBar->Alarm(CommandBase::oi->stickL->GetRawButton(2));
 }
 
 // Make this return true when this Command no longer needs to run execute()

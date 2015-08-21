@@ -10,7 +10,7 @@ private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
-	Relay* m_BarControl;
+	Talon* m_BarControl;
 	IntakeBar();
 	void InitDefaultCommand();
 	void Alarm(bool on);

@@ -21,17 +21,18 @@ void ControlWiffleLauncher::Execute()
 	int nRSpeed = nBaseSpeed;
 	float fTwist = CommandBase::oi->stickL->GetTwist();
 
-	/*if(fTwist <= -.5){
+	if(fTwist <= -.5){
 		nLSpeed -= .1;
 	}else if(fTwist >= .5){
 		nRSpeed -= .1;
-	}*/
+	}
 
+	/*
 	if(fTwist < 0){
 		nLSpeed =- (fabsf(fTwist)/10);
 	}else if(fTwist > 0){
 		nRSpeed =- (fabs(fTwist)/10);
-	}
+	}*/
 
 	if(m_button->Get()){
 		wiffleLauncher->Launch(nLSpeed, nRSpeed);

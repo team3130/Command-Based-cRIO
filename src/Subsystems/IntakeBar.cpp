@@ -6,7 +6,7 @@
 IntakeBar::IntakeBar() :
 		Subsystem("IntakeBar")
 {
-	m_BarControl = new Relay(BEATER, Relay::kForwardOnly);
+	m_BarControl = new Talon(BEATER);
 }
 
 void IntakeBar::InitDefaultCommand()
@@ -17,9 +17,9 @@ void IntakeBar::InitDefaultCommand()
 void IntakeBar::Alarm(bool on)
 {
 	if(on){
-		m_BarControl->Set(Relay::kOn);
+		m_BarControl->Set(.25);
 	}else{
-		m_BarControl->Set(Relay::kOff);
+		m_BarControl->Set(0);
 	}
 }
 
