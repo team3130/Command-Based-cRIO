@@ -11,6 +11,7 @@ public:
 	OI();
 	Joystick* stickL;
 	Joystick* stickR;
+	Joystick* StickR;
 };
 
 #endif

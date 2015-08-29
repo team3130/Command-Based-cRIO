@@ -18,10 +18,7 @@ void ExampleCommand::Execute()
 {
 	double moveSpeed = CommandBase::oi->stickL->GetY();
 	double moveTurn = CommandBase::oi->stickR->GetX();
-	if(m_forwardToggle){
-		nToggle *= -1;
-	}
-	chassis->Drive(nToggle*moveSpeed, -moveTurn);
+	chassis->Drive(moveSpeed, -moveTurn);
 }
 
 // Make this return true when this Command no longer needs to run execute()

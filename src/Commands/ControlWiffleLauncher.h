@@ -15,6 +15,7 @@ public:
 	void Interrupted();
 	JoystickButton* m_button;
 	JoystickButton* m_button2;
+	JoystickButton* m_button3;
 };
 
 #endif

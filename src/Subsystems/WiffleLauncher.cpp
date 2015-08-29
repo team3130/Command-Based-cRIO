@@ -17,8 +17,8 @@ void WiffleLauncher::InitDefaultCommand()
 
 void WiffleLauncher::Launch(float speedL, float speedR)
 {
-	m_launchControlerL->Set(speedL/-1.5);
-	m_launchControlerR->Set(speedR/-1.5);
+	m_launchControlerL->Set(speedL/-2);
+	m_launchControlerR->Set(speedR/-2);
 }
 
 void WiffleLauncher::DriveBelt(float speed)
