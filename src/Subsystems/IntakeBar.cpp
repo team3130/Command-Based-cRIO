@@ -14,10 +14,10 @@ void IntakeBar::InitDefaultCommand()
 	SetDefaultCommand(new ControlAlarm());
 }
 
-void IntakeBar::Alarm(bool on)
+void IntakeBar::Spin(bool on)
 {
 	if(on){
-		m_BarControl->Set(.25);
+		m_BarControl->Set(.5);
 	}else{
 		m_BarControl->Set(0);
 	}

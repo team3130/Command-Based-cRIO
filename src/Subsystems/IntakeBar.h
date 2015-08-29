@@ -13,7 +13,7 @@ public:
 	Talon* m_BarControl;
 	IntakeBar();
 	void InitDefaultCommand();
-	void Alarm(bool on);
+	void Spin(bool on);
 };
 
 #endif

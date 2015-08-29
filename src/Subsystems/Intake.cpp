@@ -1,21 +1,22 @@
-#include "WiffleCannon.h"
+#include "Intake.h"
+
 #include "../RobotMap.h"
 #include "../Commands/ExampleCommand.h"
 #include "relay.h"
-#include "../Commands/ControlWiffleCannon.h"
+#include "../Commands/ControlIntake.h"
 
-WiffleCannon::WiffleCannon() :
-		Subsystem("WiffleCannon")
+Intake::Intake() :
+		Subsystem("Intake")
 {
 	m_shootControler = new Talon(SHOOTMOTOR);
 }
 
-void WiffleCannon::InitDefaultCommand()
+void Intake::InitDefaultCommand()
 {
-	SetDefaultCommand(new ControlWiffleCannon());
+	SetDefaultCommand(new ControlIntake());
 }
 
-void WiffleCannon::Shoot(float direction)
+void Intake::SpinIntake(float direction)
 {
 	m_shootControler->Set(direction);
 }

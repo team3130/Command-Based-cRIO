@@ -5,6 +5,7 @@ ControlWiffleLauncher::ControlWiffleLauncher()
 {
 	Requires(wiffleLauncher);
 	m_button = new JoystickButton(CommandBase::oi->stickL,1);
+	m_button2 = new JoystickButton(CommandBase::oi->stickL,3);
 }
 
 // Called just before this Command runs the first time
@@ -27,18 +28,21 @@ void ControlWiffleLauncher::Execute()
 		nRSpeed -= .1;
 	}
 */
-
+/*
 	if(fTwist < 0){
 		nRSpeed =+ (fabsf(fTwist)/10);
 	}else if(fTwist > 0){
 		nLSpeed =+ (fabs(fTwist)/10);
 	}
-
+*/
 	if(m_button->Get()){
 		wiffleLauncher->Launch(nLSpeed, nRSpeed);
-		wiffleLauncher->DriveBelt(1);
 	}else{
 		wiffleLauncher->Launch(0,0);
+	}
+	if(m_button2->Get()){
+		wiffleLauncher->DriveBelt(1);
+	}else{
 		wiffleLauncher->DriveBelt(0);
 	}
 }

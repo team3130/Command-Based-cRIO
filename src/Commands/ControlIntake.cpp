@@ -1,23 +1,23 @@
-#include "ControlWiffleCannon.h"
+#include "ControlIntake.h"
 
-ControlWiffleCannon::ControlWiffleCannon()
+ControlIntake::ControlIntake()
 {
-	Requires(wiffleCannon);
+	Requires(intake);
 	m_button = new JoystickButton(oi->stickL, 2);
 }
 
-ControlWiffleCannon::~ControlWiffleCannon()
+ControlIntake::~ControlIntake()
 {
 	delete m_button;
 }
 // Called just before this Command runs the first time
-void ControlWiffleCannon::Initialize()
+void ControlIntake::Initialize()
 {
-	wiffleCannon->Shoot(0);
+	intake->SpinIntake(0);
 }
 
 // Called repeatedly when this Command is scheduled to run
-void ControlWiffleCannon::Execute()
+void ControlIntake::Execute()
 {/*
 // Waiting state logic - Handles trigger checking
 	if(!m_bActiveState && m_button->Get()){
@@ -30,18 +30,18 @@ void ControlWiffleCannon::Execute()
 
 		 // Reverse to shoot
 		if(m_timer->Get() < .12){
-			wiffleCannon->Shoot(float(-1.0));
+			Intake->Shoot(float(-1.0));
 		}
 
 		//Forward to stop shooting
 		else if(m_timer->Get() < .5){
 			m_dTimerTime = m_timer->Get();
-			wiffleCannon->Shoot(float(1.0));
+			Intake->Shoot(float(1.0));
 		}
 
 		//Stop running motor and reset variables and timer for shooting again
 		else if(m_timer->Get() < 1){
-			wiffleCannon->Shoot(float(0.0));
+			Intake->Shoot(float(0.0));
 			m_timer->Stop();
 			m_timer->Reset();
 			m_dTimerTime = 3600;
@@ -49,27 +49,27 @@ void ControlWiffleCannon::Execute()
 		}
 	}*/
 	if(m_button->Get()){
-		wiffleCannon->Shoot(float(1.0/3.0));
+		intake->SpinIntake(float(1.0/3.0));
 	}else{
-		wiffleCannon->Shoot(0);
+		intake->SpinIntake(0);
 	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool ControlWiffleCannon::IsFinished()
+bool ControlIntake::IsFinished()
 {
 	return false;
 }
 
 // Called once after isFinished returns true
-void ControlWiffleCannon::End()
+void ControlIntake::End()
 {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ControlWiffleCannon::Interrupted()
+void ControlIntake::Interrupted()
 {
 
 }

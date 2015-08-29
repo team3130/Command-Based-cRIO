@@ -1,19 +1,19 @@
-#ifndef WIFFLE_CANNON_H
-#define WIFFLE_CANNON_H
+#ifndef INTAKE_H
+#define INTAKE_H
 
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 
-class WiffleCannon: public Subsystem
+class Intake: public Subsystem
 {
 private:
 	// It's desirable that everything possible under private except
 	// for methods that implement subsystem capabilities
 public:
 	Talon* m_shootControler;
-	WiffleCannon();
+	Intake();
 	void InitDefaultCommand();
-	void Shoot(float direction);
+	void SpinIntake(float direction);
 };
 
 #endif

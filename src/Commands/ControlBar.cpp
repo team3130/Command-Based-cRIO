@@ -8,13 +8,13 @@ ControlBar::ControlBar()
 // Called just before this Command runs the first time
 void ControlBar::Initialize()
 {
-	intakeBar->Alarm(false);
+	intakeBar->Spin(false);
 }
 
 // Called repeatedly when this Command is scheduled to run
 void ControlBar::Execute()
 {
-	intakeBar->Alarm(CommandBase::oi->stickL->GetRawButton(2));
+	intakeBar->Spin(CommandBase::oi->stickL->GetRawButton(2));
 }
 
 // Make this return true when this Command no longer needs to run execute()

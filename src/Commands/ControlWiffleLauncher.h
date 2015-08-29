@@ -14,6 +14,7 @@ public:
 	void End();
 	void Interrupted();
 	JoystickButton* m_button;
+	JoystickButton* m_button2;
 };
 
 #endif

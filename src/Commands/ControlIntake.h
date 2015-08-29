@@ -1,14 +1,14 @@
-#ifndef CONTROL_WIFFLE_CANNON_H
-#define CONTROL_WIFFLE_CANNON_H
+#ifndef CONTROL_INTAKE_H
+#define CONTROL_INTAKE_H
 
 #include "../CommandBase.h"
 #include "WPILib.h"
 
-class ControlWiffleCannon: public CommandBase
+class ControlIntake: public CommandBase
 {
 public:
-	ControlWiffleCannon();
-	~ControlWiffleCannon();
+	ControlIntake();
+	~ControlIntake();
 	void Initialize();
 	void Execute();
 	bool IsFinished();

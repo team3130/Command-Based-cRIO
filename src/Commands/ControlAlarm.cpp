@@ -14,7 +14,7 @@ void ControlAlarm::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ControlAlarm::Execute()
 {
-	fireWhine->Alarm(CommandBase::oi->stickL->GetRawButton(4));
+	fireWhine->Alarm(CommandBase::oi->stickL->GetRawButton(10));
 }
 
 // Make this return true when this Command no longer needs to run execute()

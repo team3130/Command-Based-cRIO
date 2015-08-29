@@ -5,10 +5,10 @@
 #include "Commands/Command.h"
 #include "OI.h"
 #include "WPILib.h"
-#include "Subsystems/WiffleCannon.h"
 #include "Subsystems/ExampleSubsystem.h"
 #include "Subsystems/WiffleLauncher.h"
 #include "Subsystems/FireWhine.h"
+#include "Subsystems/Intake.h"
 #include "Subsystems/IntakeBar.h"
 
 /**
@@ -25,7 +25,7 @@ public:
 	// Create a single static instance of all of your subsystems
 	static ExampleSubsystem *chassis;
 	static OI *oi;
-	static WiffleCannon *wiffleCannon;
+	static Intake *intake;
 	static WiffleLauncher *wiffleLauncher;
 	static FireWhine *fireWhine;
 	static IntakeBar *intakeBar;
