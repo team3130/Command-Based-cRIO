@@ -18,10 +18,10 @@ void ControlWiffleLauncher::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ControlWiffleLauncher::Execute()
 {
-	float fBaseSpeed = (-0.5 * CommandBase::oi->stickL->GetZ() + 0.5);
+	float fBaseSpeed = (-0.5 * CommandBase::oi->StickR->GetZ() + 0.5);
 	float fLSpeed = fBaseSpeed;
 	float fRSpeed = fBaseSpeed;
-	float fTwist = CommandBase::oi->stickL->GetTwist();
+	float fTwist = CommandBase::oi->StickR->GetTwist();
 /*
 	if(fTwist <= -.5){
 		nLSpeed -= .1;
